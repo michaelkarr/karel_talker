@@ -17,30 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="03c-hD-ciC">
-                                <rect key="frame" x="106" y="92" width="278" height="266"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-OC-jzq">
-                                <rect key="frame" x="72" y="530" width="253" height="30"/>
+                                <rect key="frame" x="61" y="531" width="253" height="30"/>
                                 <color key="backgroundColor" red="0.96397569444444442" green="0.96397569444444442" blue="0.96397569444444442" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="karel" translatesAutoresizingMaskIntoConstraints="NO" id="Ugw-nS-aEf">
-                                <rect key="frame" x="-4" y="280" width="216" height="226"/>
+                                <rect key="frame" x="-4" y="258" width="216" height="226"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="03c-hD-ciC">
+                                <rect key="frame" x="106" y="70" width="278" height="266"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B47-ib-Yeu">
-                                <rect key="frame" x="161" y="147" width="168" height="118"/>
+                                <rect key="frame" x="161" y="125" width="168" height="118"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsA-hZ-xBr">
+                                <rect key="frame" x="145" y="582" width="85" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Backflip">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doBackflip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61y-Cp-m7H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="backflipButton" destination="gsA-hZ-xBr" id="IbN-wX-H82"/>
                         <outlet property="karelImage" destination="Ugw-nS-aEf" id="JGv-q2-byE"/>
                         <outlet property="karelText" destination="B47-ib-Yeu" id="WsA-yZ-Ah8"/>
                         <outlet property="talkField" destination="Ofy-OC-jzq" id="DZF-0Y-FQU"/>
@@ -48,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.5" y="321.5"/>
+            <point key="canvasLocation" x="142.5" y="321.5"/>
         </scene>
     </scenes>
     <resources>
