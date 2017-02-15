@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var karelImage: UIImageView!
+    @IBOutlet weak var karelText: UILabel!
+    @IBOutlet weak var talkField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        karelText.text = "Talk to me!"
+        //talkField.text = "Talk to Karel!"
     }
 
     override func didReceiveMemoryWarning() {

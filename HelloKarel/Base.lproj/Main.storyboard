@@ -17,27 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="karel" translatesAutoresizingMaskIntoConstraints="NO" id="Ugw-nS-aEf">
-                                <rect key="frame" x="10" y="280" width="216" height="226"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="03c-hD-ciC">
-                                <rect key="frame" x="113" y="93" width="278" height="266"/>
+                                <rect key="frame" x="114" y="93" width="278" height="266"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-OC-jzq">
-                                <rect key="frame" x="57" y="507" width="253" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Talk to Karel!" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-OC-jzq">
+                                <rect key="frame" x="72" y="530" width="253" height="30"/>
+                                <color key="backgroundColor" red="0.96397569444444442" green="0.96397569444444442" blue="0.96397569444444442" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNP-5j-bBu">
-                                <rect key="frame" x="177" y="164" width="42" height="21"/>
+                                <rect key="frame" x="177" y="164" width="153" height="92"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="karel" translatesAutoresizingMaskIntoConstraints="NO" id="Ugw-nS-aEf">
+                                <rect key="frame" x="6" y="280" width="216" height="226"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="karelImage" destination="Ugw-nS-aEf" id="JGv-q2-byE"/>
+                        <outlet property="karelText" destination="WNP-5j-bBu" id="nKl-oy-AhJ"/>
+                        <outlet property="talkField" destination="Ofy-OC-jzq" id="DZF-0Y-FQU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
