@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         "How are you?" : "Doing great!"
     ]
 
-    @IBAction func doBackflip(sender: AnyObject) {
+    @IBAction func doBackflip(_ sender: AnyObject) {
         karelImage.rotate360Degrees()
         karelText.text = "Yay!"
     }
@@ -64,12 +64,12 @@ extension ViewController : UITextFieldDelegate
 
     }*/
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false;
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         
         //if let: if assignment is non-null value, perform first block of code
         if let karelRespone = responses[textField.text!] {
@@ -82,7 +82,7 @@ extension ViewController : UITextFieldDelegate
 
 //from Andrew Bancroft: https://www.andrewcbancroft.com/2014/10/15/rotate-animation-in-swift/
 extension UIView {
-    func rotate360Degrees(duration: CFTimeInterval = 1.0, completionDelegate: AnyObject? = nil) {
+    func rotate360Degrees(_ duration: CFTimeInterval = 1.0, completionDelegate: AnyObject? = nil) {
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotateAnimation.fromValue = 0.0
         rotateAnimation.toValue = CGFloat(M_PI * 2.0)
@@ -91,7 +91,7 @@ extension UIView {
         if let delegate: AnyObject = completionDelegate {
             rotateAnimation.delegate = delegate
         }
-        self.layer.addAnimation(rotateAnimation, forKey: nil)
+        self.layer.add(rotateAnimation, forKey: nil)
     }
 }
 
